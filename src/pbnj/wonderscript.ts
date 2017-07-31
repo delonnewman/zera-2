@@ -2037,7 +2037,7 @@ namespace pbnj.wonderscript {
 
   ws.DEFAULT_NS.define('compile-file', ws.compileFile);
   
-  globalEnv.define('*version*', '0.0.1-alpha');
+  globalEnv.define('*version*', '0.1.4-alpha');
   globalEnv.define('*mode*', _.keyword('production'), _.hashMap(_.keyword('dynamic'), true));
   globalEnv.define('*platform*', typeof exports !== 'undefined' ? _.keyword('nodejs') : _.keyword('browser'));
   // TODO: add browser detection
@@ -2187,9 +2187,9 @@ namespace pbnj.wonderscript {
     node.define('require', require);
     node.define('__dirname', __dirname);
     node.define('__filename', __filename);
-    ws.readFile("src/pbnj/core.ws");
-    ws.readFile("src/pbnj/js.ws");
-    ws.readFile("src/pbnj/js/node.ws");
+    ws.readFile(__dirname + "/../src/pbnj/core.ws");
+    ws.readFile(__dirname + "/../src/pbnj/js.ws");
+    ws.readFile(__dirname + "/../src/pbnj/js/node.ws");
   }
 
   if (typeof document !== 'undefined') {

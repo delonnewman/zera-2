@@ -2,8 +2,8 @@
 
 const fs = require('fs');
 const readline = require('readline');
-const _  = require(__dirname + '/../src/pbnj/core.js');
-const ws = require(__dirname + '/../src/pbnj/wonderscript.js');
+const _  = require(__dirname + '/../dist/core.js');
+const ws = require(__dirname + '/../dist/wonderscript.js');
 
 const HISTORY_FILE = process.cwd() + '/.wsi-history';
 

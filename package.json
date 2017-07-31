@@ -1,8 +1,8 @@
 {
   "name": "pbnj-lang",
-  "version": "0.1.0-alpha",
+  "version": "0.1.5-alpha",
   "description": "A web language framework",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "bin": {
     "wsi": "./bin/wsi",
     "wsc": "./bin/wsc",
