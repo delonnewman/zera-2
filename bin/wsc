@@ -1,20 +1,8 @@
-#!/usr/bin/env node
-// vim: set ft=javascript
+#!/usr/bin/env node /user/local/bin/zera
+; vim: set ft=clojure
+(require "../src/pbnj/wonderscript.zera")
+(ns pbnj.wonderscript)
 
-const ws = require("../src/pbnj/wonderscript.js");
-
-if (process.argv.length === 3) {
-  try {
-    var out = ws.compileFile([process.cwd(), process.argv[2]].join('/'));
-    console.log(out);
-    process.exitCode = 0;
-  }
-  catch (e) {
-    console.error(e);
-    process.exitCode = 1;
-  }
-}
-else {
-  console.error("Usage: " + process.argv[1] + " FILE");
-  process.exitCode = 1;
-}
+(if (= 1 (count *argv*))
+  (say "USAGE: " (*argv* 0) " FILE")
+  (say (compile-file (*argv* 1))))
